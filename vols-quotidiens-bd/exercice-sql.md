@@ -25,7 +25,7 @@ les tables Avion, Pilote et Vol.**
 ***Questions:***
 
     1) Insérer les avions suivants dans la table Avion :
-         (100, AIRBUS, 300, RABAT), (101,B737,250,CASA), (101, B737,220,RABAT)
+         (100, AIRBUS, 300, RABAT), (101,B737,250,CASA), (102, B737,220,RABAT)
     2) Afficher tous les avions
     3) Afficher tous les avions par ordre croissant sur le nom
     4) Afficher les noms et les capacités des avions
