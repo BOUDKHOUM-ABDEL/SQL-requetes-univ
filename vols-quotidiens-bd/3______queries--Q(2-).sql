@@ -54,6 +54,15 @@
 
    -- 12) Afficher le nom et l’adresse des pilotes assurant les vols IT100 et IT104:
 
-   -- 13) Afficher les numéros des pilotes qui sont en service
+        SELECT p.Nom, p.Adresse
+        FROM Pilote p
+        WHERE p.NP IN (
+          SELECT v.NP
+          FROM Vol v
+          WHERE v.NV IN ('IT100', 'IT104')
+        );
+
+   -- 13) Afficher les numéros des pilotes qui sont en service:
+
    -- 14) Afficher les numéros des pilotes qui ne sont pas en service
    -- 15) Afficher les noms des pilotes qui conduisent un AIRBUS
