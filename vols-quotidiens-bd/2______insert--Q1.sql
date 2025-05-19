@@ -1,4 +1,5 @@
 
+
 ----------------------Tableau Avion-----------------------------
 
 INSERT INTO Avion (NA, Nom, Capacite, Localite) VALUES
@@ -33,6 +34,6 @@ INSERT INTO Vol (NV, NP, NA, VD, VA, HD, HA) VALUES
 
 
 /*1) Insérer les avions suivants dans la table Avion :
-     (100, AIRBUS, 300, RABAT), (101,B737,250,CASA), (102, B737,220,RABAT)*/
+     (105, AIRBUS, 300, AGADIR), (106,B737,250,CASA)*/
 
-INSERT INTO avion VALUES (100, 'AIRBUS', 300, 'RABAT'), (101,'B737',250,'CASA'), (102, 'B737',220,'RABAT');
+    INSERT INTO avion VALUES (105, 'AIRBUS', 300, 'AGADIR'), (106,'B737',250,'CASA');
