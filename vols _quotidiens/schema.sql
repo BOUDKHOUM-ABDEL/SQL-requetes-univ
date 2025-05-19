@@ -1,10 +1,25 @@
-create table Avion (
-NA int primary key,
-Nom varchar(12),
-Capacite int,
-Localite varchar(10));
 
-create table Pilote (
-NP int ,
-Nom varchar(25),
-Adresse varchar(40));
+CREATE TABLE Pilote (
+    NP INT PRIMARY KEY,
+    Nom VARCHAR(25),
+    Adresse VARCHAR(40)
+);
+
+CREATE TABLE Avion (
+    NA INT PRIMARY KEY,
+    Nom VARCHAR(12),
+    Capacite INT,
+    Localite VARCHAR(10)
+);
+
+CREATE TABLE Vol (
+    NV VARCHAR(6) PRIMARY KEY,
+    NP INT,
+    NA INT,
+    VD VARCHAR(10),
+    VA VARCHAR(10),
+    HD INT,
+    HA INT,
+    FOREIGN KEY (NP) REFERENCES Pilote(NP),
+    FOREIGN KEY (NA) REFERENCES Avion(NA)
+);
