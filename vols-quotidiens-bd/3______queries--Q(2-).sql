@@ -64,5 +64,34 @@
 
    -- 13) Afficher les numéros des pilotes qui sont en service:
 
-   -- 14) Afficher les numéros des pilotes qui ne sont pas en service
-   -- 15) Afficher les noms des pilotes qui conduisent un AIRBUS
+        SELECT DISTINCT NP
+        FROM Vol;
+
+   -- 14) Afficher les numéros des pilotes qui ne sont pas en service: 
+
+        SELECT NP
+        FROM Pilote
+        WHERE NP NOT IN (
+          SELECT DISTINCT NP FROM Vol
+        );
+
+   -- 15) Afficher les noms des pilotes qui conduisent un AIRBUS:
+
+       SELECT DISTINCT Nom
+       FROM Pilote
+       WHERE NP IN (
+         SELECT NP
+         FROM Vol
+         WHERE NA IN (
+            SELECT NA
+            FROM Avion
+            WHERE Nom = 'AIRBUS'
+         )
+        );
+       --0r:
+       SELECT DISTINCT P.Nom
+       FROM Pilote P
+       JOIN Vol V ON P.NP = V.NP
+       JOIN Avion A ON V.NA = A.NA
+       WHERE A.Nom = 'AIRBUS';
+
