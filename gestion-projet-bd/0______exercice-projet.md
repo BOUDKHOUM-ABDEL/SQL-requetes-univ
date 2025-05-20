@@ -11,9 +11,9 @@ Elle est décrite par la représentation textuelle simplifiée suivante :
 
 ***Questions:***
 
-	1. D’afficher les noms et les prix des logiciels appartenant au projet ayant comme titre « 
+	1. afficher les noms et les prix des logiciels appartenant au projet ayant comme titre « 
 	gestion de stock », triés dans l’ordre décroissant des prix . 
-	2. D’afficher le total des prix des logiciels du projet numéro 10. Lors de l’affichage, le titre de 
+	2. afficher le total des prix des logiciels du projet numéro 10. Lors de l’affichage, le titre de 
 	la colonne sera « coût total du projet ». 
 	3. Afficher le nombre de développeurs qui ont participé au projet intitulé « gestion de stock » 
 	4. Afficher les projets qui ont plus que 5 logiciels 
