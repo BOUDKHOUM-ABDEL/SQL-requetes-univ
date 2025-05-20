@@ -1,5 +1,4 @@
 
-- Logiciel (CodLog, NomLog, PrixLog, #NumProj) - Realisation (#NumProj, #NumDev)
 
 -- Developpeur (NumDev, NomDev, AdrDev, EmailDev, TelDev)
 
@@ -29,7 +28,8 @@
 		NomLog varchar(10),
 		PrixLog int, 
 		NumProj int,
-	foriegn key (NumProj) REFERENCES Projet(NumProj) 
+	    FOREIGN KEY (NumProj) REFERENCES Projet(NumProj) 
+	);
 	
 -- Realisation (#NumProj, #NumDev)
 	
