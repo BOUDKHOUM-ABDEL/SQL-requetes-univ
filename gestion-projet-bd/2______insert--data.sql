@@ -1,3 +1,6 @@
+
+
+
 -- Données pour la table Developpeur
 INSERT INTO Developpeur (NumDev, NomDev, AdrDev, EmailDev, TelDev) VALUES
 (1, 'Ali Benbrahim', '12 rue Hassan II, Rabat', 'ali.benbrahim@mail.com', '0600000001'),
