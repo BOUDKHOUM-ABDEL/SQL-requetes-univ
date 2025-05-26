@@ -14,3 +14,9 @@ WHERE NumProj = 10;
 SELECT COUNT(DISTINCT NumDev) AS nb_developpeurs
 FROM Realisation
 WHERE NumProj = (SELECT NumProj FROM Projet WHERE TitreProj = 'gestion de stock');
+
+-- 4. Projets avec plus de 5 logiciels
+SELECT NumProj
+FROM Logiciel
+GROUP BY NumProj
+HAVING COUNT(*) > 5;
