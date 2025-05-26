@@ -15,7 +15,7 @@
 
 	create table Projet (
 		NumProj int primary key,
-		TitreProj varchar(15),
+		TitreProj varchar(20),
 		DateDeb varchar(10),
 		DateFin varchar(10)
 	);
@@ -25,7 +25,7 @@
 
 	create table Logiciel (
 		CodLog int primary key,
-		NomLog varchar(10),
+		NomLog varchar(20),
 		PrixLog int, 
 		NumProj int,
 	    FOREIGN KEY (NumProj) REFERENCES Projet(NumProj) 
@@ -36,7 +36,6 @@
 	CREATE TABLE Realisation (
 		NumProj INT,
 		NumDev INT,
-		PRIMARY KEY (NumProj, NumDev),
 		FOREIGN KEY (NumProj) REFERENCES Projet(NumProj),
 		FOREIGN KEY (NumDev) REFERENCES Developpeur(NumDev)
 	);
