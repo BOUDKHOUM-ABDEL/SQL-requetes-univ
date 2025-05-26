@@ -34,3 +34,17 @@ WHERE NOT EXISTS (
         AND Realisation.NumDev = Developpeur.NumDev
     )
 );
+
+-- 6. Projets dans lesquels tous les développeurs participent
+SELECT NumProj
+FROM Projet
+WHERE NOT EXISTS (
+    SELECT *
+    FROM Developpeur
+    WHERE NOT EXISTS (
+        SELECT *
+        FROM Realisation
+        WHERE Realisation.NumDev = Developpeur.NumDev
+        AND Realisation.NumProj = Projet.NumProj
+    )
+);
