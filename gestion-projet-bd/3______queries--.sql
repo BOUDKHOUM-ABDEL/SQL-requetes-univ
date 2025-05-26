@@ -20,3 +20,17 @@ SELECT NumProj
 FROM Logiciel
 GROUP BY NumProj
 HAVING COUNT(*) > 5;
+
+-- 5. Développeurs ayant participé à tous les projets
+SELECT NumDev, NomDev
+FROM Developpeur
+WHERE NOT EXISTS (
+    SELECT *
+    FROM Projet
+    WHERE NOT EXISTS (
+        SELECT *
+        FROM Realisation
+        WHERE Realisation.NumProj = Projet.NumProj
+        AND Realisation.NumDev = Developpeur.NumDev
+    )
+);
